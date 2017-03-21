@@ -18,7 +18,7 @@
     detail: National Institute of Technology, Jaipur
     i18n: company_b
   desc:
-    detail: Machine Learning, IBM Watson, Headword Extraction, Research, 
+    detail: Machine Learning, IBM Watson, Headword Extraction, Research
     i18n: company_b_desc
   date:
     detail: May 2015 - Jun. 2015
@@ -26,4 +26,18 @@
   job:
     detail: Research Intern
     i18n: company_b_job
+  icon: fa-plus-square
+  
+ - name:
+    detail: Ameya Infocom
+    i18n: company_c
+  desc:
+    detail:  Android Application Development
+    i18n: company_c_desc
+  date:
+    detail: May 2014 - Jun. 2014
+    i18n: company_c_date
+  job:
+    detail: Intern
+    i18n: company_c_job
   icon: fa-plus-square
