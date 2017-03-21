@@ -7,7 +7,7 @@
     detail: Solving problems, fixing issues, writing code
     i18n: company_a_desc
   date:
-    detail: Jun. 2016
+    detail: Jun. 2016 - Present
     i18n: company_a_date
   job:
     detail: Associate Software Developer
@@ -15,15 +15,15 @@
   icon: fa-plus-square
 
 - name:
-    detail: Company B
+    detail: National Institute of Technology, Jaipur
     i18n: company_b
   desc:
-    detail: I worked at Company B ...
+    detail: Machine Learning, IBM Watson, Headword Extraction, Research, 
     i18n: company_b_desc
   date:
-    detail: Jun. 2015
+    detail: May 2015 - Jun. 2015
     i18n: company_b_date
   job:
-    detail: Full Stack Developer
+    detail: Research Intern
     i18n: company_b_job
   icon: fa-plus-square
