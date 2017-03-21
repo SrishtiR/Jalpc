@@ -8,7 +8,7 @@
     i18n: company_a_desc
   date:
     detail: Jun. 2016
-     i18n: company_a_date
+    i18n: company_a_date
   job:
     detail: Associate Software Developer
     i18n: company_a_job
