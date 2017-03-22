@@ -41,3 +41,17 @@
     detail: Intern
     i18n: company_c_job
   icon: fa-plus-square
+  
+ - name:
+    detail: Vellore Institue Of Technology
+    i18n: company_d
+  desc:
+    detail: B. Tech. , Computer Science
+    i18n: company_d_desc
+  date:
+    detail: Jul. 2012 - Jul. 2016
+    i18n: company_d_date
+  job:
+    detail: Courses : Data Strustures, Databases, Pattern Recognition, Data Mining, Programming, Artificial Intelligence
+    i18n: company_d_job
+  icon: fa-plus-square
