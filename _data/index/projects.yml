@@ -22,8 +22,7 @@
 
 - name: IOT Based Smart Irrigation System
   i18n: familycode
-  gh_user: srishtir
-  repo: 
+  gh_user: srishtir 
   img: /static/assets/img/landing/leetcode.png
   link: s
   desc: My solutions to data structures problems on geeks for geeks
