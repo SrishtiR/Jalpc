@@ -43,7 +43,7 @@
   icon: fa-plus-square
   
 - name:
-    detail: Vellore Institue Of Technology
+    detail: Vellore Institute Of Technology
     i18n: company_d
   desc:
     detail: Data Structures, Databases, Pattern Recognition, Data Mining, Programming, Artificial Intelligence
