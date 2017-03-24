@@ -12,7 +12,7 @@
   i18n: leetcode
   gh_user: srishtir
   repo: data_structures_algorithms
-  img: /static/assets/img/landing/leetcode.png
+  img: /static/assets/img/landing/saplatform.png
   desc: My solutions to data structures problems on geeks for geeks
 
 #- name: FamilyCODE Wchat
@@ -23,6 +23,13 @@
 - name: IOT Based Smart Irrigation System
   i18n: familycode
   gh_user: srishtir 
-  img: /static/assets/img/landing/leetcode.png
+  img: /static/assets/img/landing/saplatform.png
   link: s
   desc: Eliminating the need of human intervention in thr process of irrigation
+  
+- name: Sentiment Analysis
+  i18n: familycode
+  gh_user: srishtir 
+  img: /static/assets/img/landing/saplatform.png
+  repo: Sentiment-Analysis
+  desc: Extracted data from twitter and huffingtonpost to predict the sentiment of entity being talked about in the tweet/article. 
