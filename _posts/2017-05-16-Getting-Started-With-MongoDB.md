@@ -9,7 +9,8 @@ tags: [mongodb, nosql]
 icon: icon-html
 ---
 
-=> Document oriented database => A class that falls under another category called NoSql databases
+=> Document oriented database 
+=> A class that falls under another category called NoSql databases
 => NoSQL
 History :
 Before 1970S => Flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
