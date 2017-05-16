@@ -1,39 +1,142 @@
 ---
 layout: post
-title:  "3 Steps (2 minutes) to Setup Your Personal Website with Jalpc"
+title:  "Getting started with MongoDB"
 date:   2017-01-31
-desc: "3 Steps (2 minutes) to Setup Your Personal Website with Jalpc"
-keywords: "Jalpc,Jekyll,gh-pages,website,blog,easy"
+desc: "Getting started with MongoDB"
+keywords: "mongodb, nosql, big data"
 categories: [HTML]
-tags: [Jalpc,Jekyll]
+tags: [mongodb, nosql]
 icon: icon-html
 ---
 
-Everyone wants to have a personal website, you can display your infomation to public, post blogs and make friends. If you are CS engineer, haveing a self website will benefit your interview.
+=> Document oriented database => A class that falls under another category called NoSql databases
+=> NoSQL
+History :
+Before 1970S => Flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
 
-So, if you like this website <https://jarrekk.github.io/Jalpc/> or <http://www.jarrekk.com> and are willing to have a website, here is a way to build your website in 3 steps(2 minutes). Following are steps to setup your website(make sure you have basic knowledge of [Jekyll](https://jekyllrb.com/) and [GitHub Pages](https://pages.github.com/), if you want to custom css/js [NPM](https://github.com/npm/npm) is needed):
+1969 => Relational databases provided a standard implementation
+But these could not handle big data ,they are not horizontally scalable (the ability to increase capacity by connecting multiple hardware or software entities so that they work as a single logical unit, keep on adding more and more computers to add more power)
+Performance is linearly proportional to number of computers
 
-1. Fork [this project -- Jalpc](https://github.com/jarrekk/Jalpc) at [GitHub](https://github.com). If you want to edit website at github, do it as following gif or clone forked repository. `git clone git@github.com:github_username/Jalpc.git`.
+Recently => NoSQL Databases came into picture 
+Key-Value stores, Tablular database, Document oriented
+What's missing in NoSQL databases? 
+=> No joins supported
+=> Complex transactions are not supported(e.g rolling back of multiple transactions)
+=> Constraints are not supported at database level but at application level
 
-	<!-- ![edit]({{ site.img_path }}/3steps/edit.gif) -->
-	<img src="{{ site.img_path }}/3steps/edit.gif" width="75%">
+What's there in NoSQL Databases? 
+=> Query language
+=> Fast Performance
+=> Horizontal scalability
 
-2. Enter into repository directory and edit following file list:
+=> Data or records are stored as documents, JSON objects, Javascript object notation
+=> No pre defined structuring required before building your application
+=> Very easy to scale as compared to rdbms, high performance
 
-	* **_config.yml**: edit 'Website settings', 'author', 'comment' and 'analytics' items.
+Flags : 
+cd mongodb/bin
+mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install 
+net start MongoDB
+(Above 3 will set flags and make mongo run in the background as a service)
 
-	* **_data/landing.yml**: custom sections of index page.
+type mongo to get into in mongo shell
 
-	* **_data/index/**: edit sections' data to yours at index page, please notice comment at each file.
+> showdb
+=> shows all existing databases
 
-	* **_data/blog.yml**: edit navbar(categories) of blog page, if you have different/more blog page, copy `blog/python.html` and change it to your category HTML file, and edit **Python**, **/python/** to your category name at items **title** and **permalink**, make sure title is the same as permalink but capitalized first letter(except HTML).
+> use mycustomers
+=> command to create a new databse called my customers and switch to that database
 
-	* **CNAME**: If you wanna release website at your own domain name: edit it and create `gh-pages` branch; if you want to use *github_username.github.io*: leave it blank.
+to check current database => type db
 
-	* Go to repo's settings panel, config **GitHub Pages** section to make sure website is released.
+Sample JSON object :
+{
+  first_name : "John",
+  last_name : "Doe",
+  memberships : ["mem1","mem2"],
+  address : {
+    street : "4 main st",
+    city : "Boston"
+   }
+   contacts : [
+   {name: "Brad", relationship:"friend"}
+   ]
+}
 
-3. Push changes to your github repository and view your website, done!
+creating a new user for the database  :
 
-From now on, you can post your blog to this website by creating md files at `post/` directory and push it to GitHub, you can clear files at this directory before you post blogs.
+db.createUser({
+  user:"brad",
+  pwd:"1234",
+  roles:["readWrite","dbAdmin"]
+});
 
-If you like this repository, I appreciate you star this repository. Please don't hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊
+Adding data into database :
+Collections are very similar to tables in a database.
+
+>db.createCollection('customers');
+>show collections
+>db.customers.insert({first_name:"John", last_name:"Doe"});
+to see documents in a collection :
+>db.customers.find();
+ID field is automatically created
+
+>db.customers.insert([{first_name:"Steven", last_name:"Smith"},{first_name:"Joan", last_name:"Johnson",gender:"female"}]);
+Even though we didn't specify gender in the first 2 rows, the last one would have a field gender. i.e. we can add more fields as per our requirement
+
+>db.customers.find().pretty();
+Displays the records in a better way
+
+>db.customers.update({first_name:"John"},{first_name:"John",last_name:"Doe",gender:"Male"});
+Now John Doe will have a gender of male, if we missed a field it will be removed
+
+
+>db.customers.update({first_name:"Steven"},{$set:{gender:"Male"})
+This will add a field. Previous fields will remain untouched.
+
+inc operator :
+
+>db.customers.update({first_name:"Steven"},{$set:{age:"45"})
+
+>db.customers.update({first_name:"Steven"},{$inc:{age:5}});
+
+operator unset :
+
+>db.customers.update({first_name:"Steven",{($unset:{age:1})
+Now steven will not have age field
+
+>db.customers.update({first_name:"Mary",{first_name:"Mary",last_name:"Samson"},{upsert : true})
+with upsert the new updated row gets inserted
+
+>db.customer.remove({first_name:"Steven"})
+Removes all the customers with first_name Steven
+
+>db.customer.remove({first_name:"Steven"},{justOne:true})
+removes only one record
+
+>db.customers.find({first_name:"Sharon"})
+=> will give all sharon info
+
+>db.customers.find({$or:[first_name:"Sharon", {first_name:"Troy"}]);
+
+>db.customers.find({age:{$lt:40}}).pretty();
+gives every customer with age < 40
+
+>db.customers.find({"address.city":Boston"});
+There are some which would require quotes in the key as well
+
+>db.customers.find({memberships:"mem1"});
+
+Sorting :
+>db.customers.find().sort({last_name:1});
+Ascending order based on last_name
+for descending, set it to -1
+
+>db.customers.find().count();
+>db.customers.find({gender:"male"}).count();
+>db.customers.find().limit(4).sort({last_name:1});
+
+Using for-each to iterate :
+
+>db.customers.find().forEach(function(doc){print("Customer Name: "+doc.first_name)});
