@@ -9,31 +9,31 @@ tags: [mongodb, nosql]
 icon: icon-html
 ---
 
-=> Document oriented database 
-=> A class that falls under another category called NoSql databases
-=> NoSQL
+* Document oriented database 
+* A class that falls under another category called NoSql databases
+* NoSQL
 History :
-Before 1970S => Flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
+Before 1970S * Flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
 
-1969 => Relational databases provided a standard implementation
+1969 * Relational databases provided a standard implementation
 But these could not handle big data ,they are not horizontally scalable (the ability to increase capacity by connecting multiple hardware or software entities so that they work as a single logical unit, keep on adding more and more computers to add more power)
 Performance is linearly proportional to number of computers
 
-Recently => NoSQL Databases came into picture 
+Recently, NoSQL Databases came into picture 
 Key-Value stores, Tablular database, Document oriented
 What's missing in NoSQL databases? 
-=> No joins supported
-=> Complex transactions are not supported(e.g rolling back of multiple transactions)
-=> Constraints are not supported at database level but at application level
+* No joins supported
+* Complex transactions are not supported(e.g rolling back of multiple transactions)
+* Constraints are not supported at database level but at application level
 
 What's there in NoSQL Databases? 
-=> Query language
-=> Fast Performance
-=> Horizontal scalability
+* Query language
+* Fast Performance
+* Horizontal scalability
 
-=> Data or records are stored as documents, JSON objects, Javascript object notation
-=> No pre defined structuring required before building your application
-=> Very easy to scale as compared to rdbms, high performance
+* Data or records are stored as documents, JSON objects, Javascript object notation
+* No pre defined structuring required before building your application
+* Very easy to scale as compared to rdbms, high performance
 
 Flags : 
 cd mongodb/bin
@@ -44,10 +44,10 @@ net start MongoDB
 type mongo to get into in mongo shell
 
 > showdb
-=> shows all existing databases
+* shows all existing databases
 
 > use mycustomers
-=> command to create a new databse called my customers and switch to that database
+* command to create a new databse called my customers and switch to that database
 
 to check current database => type db
 
