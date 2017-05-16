@@ -1,10 +1,10 @@
 ---
 layout: post
 title:  "Getting started with MongoDB"
-date:   2017-01-31
+date:   2017-05-16
 desc: "Getting started with MongoDB"
 keywords: "mongodb, nosql, big data"
-categories: [HTML]
+categories: [Databases]
 tags: [mongodb, nosql]
 icon: icon-html
 ---
