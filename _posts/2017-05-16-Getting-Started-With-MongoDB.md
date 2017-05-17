@@ -13,7 +13,7 @@ icon: icon-html
 * A class that falls under another category called NoSql databases
 * NoSQL 
 
-# History :
+##### History :
 Before 1970, there were flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
 
 In 1969, Relational databases provided a standard implementation
@@ -22,12 +22,13 @@ Performance is linearly proportional to number of computers
 
 Recently, NoSQL Databases came into picture.
 Key-Value stores, Tablular database, Document oriented.
-What's missing in NoSQL databases? 
+
+##### What's missing in NoSQL databases? 
 * No joins supported
 * Complex transactions are not supported(e.g rolling back of multiple transactions)
 * Constraints are not supported at database level but at application level
 
-What's there in NoSQL Databases? 
+##### What's there in NoSQL Databases? 
 * Query language
 * Fast Performance
 * Horizontal scalability
@@ -36,21 +37,21 @@ What's there in NoSQL Databases?
 * No pre defined structuring required before building your application
 * Very easy to scale as compared to rdbms, high performance
 
-Flags : 
-cd mongodb/bin
-mongod --directoryperdb --dbpath C:\mongodb\data\db --logpath C:\mongodb\log\mongo.log --logappend --rest --install 
-net start MongoDB
-(Above 3 will set flags and make mongo run in the background as a service)
+##### Setting mongoDB in a mac :
+sudo mkdir -p /data/db/
+sudo chown `id -u` /data/db
+export PATH=$PATH:{path upto bin}
+type mongod in a terminal, this will give the message : "waiting for connections on port 27017"
+Open a new terminal to connect to the server. Type mongo. This will start mongo shell.  
 
-type mongo to get into in mongo shell
-
-> showdb
+> show dbs
 * shows all existing databases
 
 > use mycustomers
 * command to create a new databse called my customers and switch to that database
 
-to check current database => type db
+> db
+* To check the current database
 
 Sample JSON object :
 {
@@ -66,20 +67,21 @@ Sample JSON object :
    ]
 }
 
-creating a new user for the database  :
+* creating a new user for the database  :
 
-db.createUser({
-  user:"brad",
-  pwd:"1234",
-  roles:["readWrite","dbAdmin"]
-});
+> db.createUser({
+>  user:"brad",
+>  pwd:"1234",
+>  roles:["readWrite","dbAdmin"]
+> });
 
-Adding data into database :
+##### Adding data into database :
 Collections are very similar to tables in a database.
 
->db.createCollection('customers');
->show collections
->db.customers.insert({first_name:"John", last_name:"Doe"});
+> db.createCollection('customers');
+> show collections
+> db.customers.insert({first_name:"John", last_name:"Doe"});
+
 to see documents in a collection :
 >db.customers.find();
 ID field is automatically created
