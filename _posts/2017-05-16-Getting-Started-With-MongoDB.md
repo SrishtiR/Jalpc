@@ -11,16 +11,16 @@ icon: icon-html
 
 * Document oriented database 
 * A class that falls under another category called NoSql databases
-* NoSQL
-History :
-Before 1970S * Flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
+* NoSQL (space,space)
+#History :
+Before 1970, there were flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
 
-1969 * Relational databases provided a standard implementation
+In 1969, Relational databases provided a standard implementation
 But these could not handle big data ,they are not horizontally scalable (the ability to increase capacity by connecting multiple hardware or software entities so that they work as a single logical unit, keep on adding more and more computers to add more power)
 Performance is linearly proportional to number of computers
 
-Recently, NoSQL Databases came into picture 
-Key-Value stores, Tablular database, Document oriented
+Recently, NoSQL Databases came into picture.
+Key-Value stores, Tablular database, Document oriented.
 What's missing in NoSQL databases? 
 * No joins supported
 * Complex transactions are not supported(e.g rolling back of multiple transactions)
