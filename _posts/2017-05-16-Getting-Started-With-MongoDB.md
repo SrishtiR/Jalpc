@@ -11,9 +11,9 @@ icon: icon-html
 
 * Document oriented database 
 * A class that falls under another category called NoSql databases
-* NoSQL (space,space)
+* NoSQL 
 
-#History :
+# History :
 Before 1970, there were flat file systems, problem : no standard implementation i.e. everybody had their own implementations so retrieval and insertion was a complication
 
 In 1969, Relational databases provided a standard implementation
