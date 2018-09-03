@@ -2,16 +2,16 @@
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
     detail: University of Colorado, Boulder
-    i18n: company_a
+    i18n: company_x
   desc:
     detail: Masters in Computer Science
-    i18n: company_a_desc
+    i18n: company_x_desc
   date:
     detail: Aug. 2018 - Present
     i18n: company_a_date
   job:
-    detail: 
-    i18n: company_a_job
+    detail: Machine learning, NLP
+    i18n: company_x_job
   icon: fa-plus-square
 
 - name:
