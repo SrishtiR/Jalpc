@@ -7,12 +7,14 @@
     detail: Masters in Computer Science
     i18n: company_a_desc
   date:
-    detail: Aug 2018 - Present
+    detail: Aug. 2018 - Present
     i18n: company_a_date
   job:
-    detail: Technical Analyst
+    detail: 
     i18n: company_a_job
   icon: fa-plus-square
+
+- name:
     detail: Empower Retirement
     i18n: company_a
   desc:
