@@ -8,7 +8,7 @@
     i18n: company_x_desc
   date:
     detail: Aug. 2018 - Present
-    i18n: company_a_date
+    i18n: company_x_date
   job:
     detail: Machine learning, NLP
     i18n: company_x_job
